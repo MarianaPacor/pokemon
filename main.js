@@ -26,6 +26,10 @@ const checkAnswer = (event) => {
     )
     } else {
         div.style.backgroundColor = '#ff5722';
+        localStorage.setItem(
+            'pontuacao',
+            String(parseInt(localStorage.getItem('pontuacao')) - 100)
+     )
     }
 
     input.value = "";
